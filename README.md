@@ -2,6 +2,9 @@
 
 Newline delimited JSON streaming made easy
 
+## Installation
+      $ npm install njstream
+
 ## Examples
 
 ### Simple usage
