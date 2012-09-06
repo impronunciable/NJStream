@@ -1,0 +1,13 @@
+{
+    "name": "njstream"
+  , "version": "0.0.1"
+  , "main": "./njstream"
+  , "description": "Newline delimited JSON streaming made easy"
+  , "devDependencies": {
+      "mocha": "*",
+      "should": "*"
+    }
+  , "keywords": ["stream", "streaming", "json"]
+  , "author": "Dan Zajdband <dan.zajdband@gmail.com>"
+  , "repository": { "type": "git", "url": "git@github.com:danzajdband/NJStream.git" }
+}
