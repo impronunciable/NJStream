@@ -5,6 +5,7 @@ var Stream = require('stream').Stream
 function NJStream(delimiter) {
   Stream.call(this);
   this.writable = true;
+  this.readable = true;
   this.delimiter = delimiter || '\n';
   this.buffer = '';
 }
@@ -24,14 +25,14 @@ NJStream.prototype.parse = function(data) {
 
     self.buffer = '';
 
-    if(delim !== data.length - 1) {
-      self.parse(data.substr(delim + 1));        
+    if(delim !== data.length - self.delimiter.length) {
+      self.parse(data.substr(delim + self.delimiter.length));        
     }
 
   } else {
   
     if(delim === 0) {
-      data = data.substr(1);
+      data = data.substr(self.delimiter.length);
     }
 
     self.buffer += data;
