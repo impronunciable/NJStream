@@ -49,6 +49,7 @@ NJStream.prototype.end = function(data) {
     this.parse(data);
   }
   this.writable = false;
+  this.removeAllListeners();
 };
 
 module.exports = NJStream;
