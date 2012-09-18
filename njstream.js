@@ -41,6 +41,7 @@ NJStream.prototype.parse = function(data) {
 
 NJStream.prototype.write = function(data) {
   this.parse(data);
+  this.emit('data', data);
   return true;
 };
 
