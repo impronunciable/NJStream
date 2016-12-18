@@ -25,7 +25,7 @@ NJStream.prototype.parse = function(data) {
     try {
       self.emit('parsed', JSON.parse(self.buffer));
     } catch(e) {
-      self.emit('error', new Error('Bad token: ' + data));
+      self.emit('parsing_error', new Error('Bad token: ' + data));
     }
 
     self.buffer = '';
